@@ -1087,6 +1087,18 @@
             alert("You are using the " + b + " browser and this browser is incompatible with this website and many others.  Please open this page in a different browser, either Chrome or Firefox.  Thank you!");
         }
     </script>
+    
+    <script>
+        function init() {
+            var vidDefer = document.getElementsByTagName('iframe');
+            for (var i = 0; i < vidDefer.length; i++) {
+                if (vidDefer[i].getAttribute('data-src')) {
+                    vidDefer[i].setAttribute('src', vidDefer[i].getAttribute('data-src'));
+                }
+            }
+        }
+        window.onload = init;
+    </script>
 
     <script defer src="app.js"></script>
 </body>
