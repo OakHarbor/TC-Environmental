@@ -386,6 +386,7 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 630px;
+    margin-bottom: 100px;
 }
 
 .top-image {
@@ -419,7 +420,7 @@
     position: relative;
     z-index: 1000;
     width: 100%;
-    height: 580px;
+    height: 650px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -468,11 +469,224 @@
     margin: auto;
 }
 
-iframe {
+.video-box {
+    background: url("/images/video-box-background-mobile.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
-    height: 600px !important;
+    height: 250px !important;
     position: relative;
     z-index: 1001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-button {
+    border: none;
+    position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background: rgb(9, 190, 69);
+    padding: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: auto;
+    -webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+#Capa_1 {
+    width: 30px !important;
+    height: 30px !important;
+    position: relative;
+    z-index: 1000;
+}
+
+.video-button:hover {
+    cursor: pointer;
+    background-color: rgb(2, 131, 45);
+    -webkit-transition: .3s ease;
+    -o-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    background: rgb(233, 233, 233);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.circle1 {
+    -webkit-animation-name: circle1;
+            animation-name: circle1;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.circle2 {
+    -webkit-animation-name: circle2;
+            animation-name: circle2;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+.circle3 {
+    -webkit-animation-name: circle3;
+            animation-name: circle3;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes circle1 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    50% {
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3);
+    }
+}
+
+@keyframes circle1 {
+    0% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    50% {
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(3);
+                transform: scale(3);
+    }
+}
+
+@-webkit-keyframes circle2 {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.8);
+                transform: scale(2.8);
+    }
+}
+
+@keyframes circle2 {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.8);
+                transform: scale(2.8);
+    }
+}
+
+@-webkit-keyframes circle3 {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .3;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+    }
+}
+
+@keyframes circle3 {
+    0% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: .3;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        -webkit-transform: scale(2.5);
+                transform: scale(2.5);
+    }
 }
 
 #video .clippy {
@@ -1211,8 +1425,8 @@ iframe {
         bottom: -350px;
     }
 
-    .iframe {
-        height: 500px;
+    .video-box {
+        height: 500px !important;
     }
 
     /*-- -------------------------- -->
@@ -2023,11 +2237,13 @@ iframe {
         margin-top: 0;
     }
 
-    iframe {
+    .video-box {
         height: 550px !important;
         position: absolute;
         bottom: -350px;
+        background: url("/images/video-box-background-mobile.jpg");
     }
+    
 
     .bottom-image {
         position: absolute;
@@ -2083,7 +2299,7 @@ iframe {
     #qualities {
         max-width: 1350px;
         margin: auto;
-        padding-top: 350px;
+        padding-top: 250px;
     }
 
     #qualities.container {
@@ -2142,6 +2358,7 @@ iframe {
     #call-strip {
         margin-bottom: 200px;
         height: 470px;
+        background-attachment: fixed;
     }
 
     #call-strip h2 {
