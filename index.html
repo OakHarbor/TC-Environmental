@@ -47,7 +47,8 @@
         <!-- Desktop Navbar -->
         <div class="mobile-wrapper">
             <div class="mobile-nav container mobile-nav-container">
-                <img id="mobile-logo" src="/images/company-logo-desktop.png" alt="mobile_company_logo" height="60"> 
+                <img id="mobile-logo" class="mobile" src="/images/company-logo-desktop-mobile.png" alt="mobile_company_logo" height="60"> 
+                <img id="mobile-logo" class="desktop" src="/images/company-logo-desktop.png" alt="mobile_company_logo" height="60">
 
                 <!-- Hamburger Menu -->
                 <button aria-label="open the menu" id="menu-button" class="hamburger hamburger--spring" onclick="toggleNav()" type="button">
@@ -65,13 +66,14 @@
         <nav>
             <div class="navbar-menu">
                 <div id="side-menu" class=" side-nav">
-                    <img aria-hidden="true" src="/images/company-logo-desktop-light.png" alt="compnay logo" height="80">
+                    <img aria-hidden="true" class="mobile" src="/images/company-logo-desktop-light-mobile.png" alt="company logo" height="80">
+                    <img aria-hidden="true" class="desktop" src="/images/company-logo-desktop-light.png" alt="company logo" height="80">
                     <ul id="on-top" class="navbar-links">
-                        <li class="nav-li"><a class="active-menu" href="index.html">Home</a></li>
-                        <li class="nav-li"><a href="html/about.html">About</a></li>
-                        <li class="nav-li"><a href="html/services.html">Services</a></li>
-                        <li class="nav-li"><a href="html/portfolio.html">Portfolio</a></li>
-                        <li class="nav-li"><a href="html/contact.html">Contact</a></li>
+                        <li class="nav-li"><a class="active-menu" href="/index.html">Home</a></li>
+                        <li class="nav-li"><a href="/html/about.html">About</a></li>
+                        <li class="nav-li"><a href="/html/services.html">Services</a></li>
+                        <li class="nav-li"><a href="/html/portfolio.html">Portfolio</a></li>
+                        <li class="nav-li"><a href="/html/contact.html">Contact</a></li>
                         <li class="nav-li call-us"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 367.633 367.633" style="enable-background:new 0 0 367.633 367.633;" xml:space="preserve" width="512px" height="512px">
                                 <g>
                                     <path d="M266.003,0H101.63C86.293,0,73.816,12.476,73.816,27.812v312.01c0,15.335,12.477,27.812,27.813,27.812h164.373  c15.337,0,27.814-12.477,27.814-27.812V27.812C293.816,12.476,281.34,0,266.003,0z M194.844,338.736  c0,2.175-1.763,3.938-3.938,3.938h-14.18c-2.175,0-3.938-1.763-3.938-3.938v-12.604c0-1.279,0.622-2.481,1.669-3.219l7.09-4.993  c1.362-0.959,3.175-0.959,4.537,0l7.09,4.993c1.047,0.737,1.669,1.939,1.669,3.219V338.736z M260.732,300.516H106.9V42.299h153.832  V300.516z" data-original="#000000" class="active-path" data-old_color="#000000" fill="var(--primary)" />
@@ -646,7 +648,7 @@
             <h2>Professional Tree Removal Services For Over 20 Years</h2>
             <h3>Learn more about TC Environemntal Services from the owner himself, Tom Cramer, as he talks about his qualificaitons, licenses, and tree services offered. 
             </h3>
-            <iframe width="1195" height="672" src="https://www.youtube.com/embed/KTQzGKcXm-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe defer width="1195" height="672" src="https://www.youtube.com/embed/KTQzGKcXm-c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="clippy"></div>
     </section>
@@ -715,7 +717,12 @@
         <div class="container">
             <div class="content">
                 <div class="content-container">
-                    <div class="content-left">
+                    <div class="content-left mobile">
+                        <img src="/images/tree-trimming-example-1-mobile.jpg" alt="">
+                        <img src="/images/leaf.svg" alt="">
+                        <img src="/images/tc-environmental-services-tree-trimming-example-2-mobile.jpg" alt="">
+                    </div>
+                    <div class="content-left desktop">
                         <img src="/images/tree-trimming-example-1.jpg" alt="">
                         <img src="/images/leaf.svg" alt="">
                         <img src="/images/tc-environmental-services-tree-trimming-example-2.jpg" alt="">

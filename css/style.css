@@ -1,7 +1,10 @@
+.desktop {
+    display: none;
+}
+
 /*-- -------------------------- -->
 <---           LANDING          -->
 <--- -------------------------- -*/
-
 
 #hero {
     height: 650px;
@@ -1747,6 +1750,14 @@ iframe {
 
 /* Desktop */
 @media screen and (min-width: 1026px) {
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
 
     .section {
         padding-top: 100px;
