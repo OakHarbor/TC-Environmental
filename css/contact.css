@@ -6,7 +6,7 @@
 
 #hero {
     height: 120px;
-    background: url("/images/services-mobile.jpg");
+    background: url("/images/contact-page-mobile.jpg");
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
@@ -305,7 +305,7 @@ form p{
 
     #hero {
         height: 500px;
-        background: url("/images/image-19.jpg");
+        background: url("/images/contact-page-desktop.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;

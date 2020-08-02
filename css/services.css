@@ -63,121 +63,33 @@
     font-size: 0.9375em;
 }
 
-/* services cards */
 .services {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin: 50px auto;
+    padding-top: 50px;
+    margin: auto;
 }
 
 .service {
-    padding: 50px 25px;
-    background: #fff;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin: auto;
-    margin-bottom: 50px;
-    width: 90%;
-    -webkit-box-shadow: 0 0 40px rgba(0,0,0,.1);
-    box-shadow: 0 0 40px rgba(0,0,0,.1);
+    width: 300px;
+    margin-right: 0;
+    margin-bottom: 10px;
 }
 
-.service p {
-    max-width: 380px;
-}
-
-.service:last-child {
-    margin-bottom: 0;
-}
-
-.service svg {
-    width: 50px !important;
-    height: auto;
-}
-
-.svg-box {
-    background: #eeeef1;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 40px;
+.service img {
+    width: 40px;
 }
 
 .service h3 {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: 500;
-    font-size: 1.25em;
-}
-
-.service p {
-    text-align: center;
-}
-
-.card-button {
-    background: transparent;
-    color: var(--primary);
-    padding: 0;
-    font-size: 0.9375em;
-    font-weight: bold;
-    margin: auto;
-    display: block;
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-}
-
-.card-button:hover {
-    border: none;
-    opacity: .6;
-}
-
-.card-button:before {
-    position: absolute;
-    content: url("/images/arrow.svg");
-    right: -20px;
-    top: 18px;
+    text-align: left;
+    margin-left: 20px;
 }
 
 /*-- -------------------------- -->
@@ -302,9 +214,9 @@
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center;
-        -webkit-transform: translateY(140px);
-            -ms-transform: translateY(140px);
-                transform: translateY(140px);
+        -webkit-transform: translateY(100px);
+            -ms-transform: translateY(100px);
+                transform: translateY(100px);
     }
 
     .heroText h2 {
@@ -324,10 +236,26 @@
 
     #services {
         margin-top: 100px;
+        padding-bottom: 100px;
     }
 
     .services-topper h2 {
         font-size: 2.25em;
+    }
+
+    .services {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     /*-- -------------------------- -->
@@ -349,7 +277,7 @@
     #reasons:before {
         content: '';
         position: absolute;
-        background: url("/images//about-strip.png");
+        background: url("/images/about-strip.png");
         height: 140%;
         right: 0px;
         width: 80%;
@@ -360,10 +288,10 @@
     #reasons:after {
         content: '';
         position: absolute;
-        background: url("/images/image-4.jpg");
+        background: url("/images/landing-desktop.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: right;
+        background-position: center;
         -webkit-box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
         height: 95%;
@@ -414,16 +342,6 @@
     .services-topper {
         max-width: 830px;
         margin: auto;
-    }
-
-    .services {
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
-
-    .service {
-        margin: 50px auto !important;
-        max-width: 400px;
     }
 
     /*-- -------------------------- -->
@@ -479,7 +397,7 @@
 
     #hero {
         height: 500px;
-        background: url("/images/image-19.jpg");
+        background: url("/images/services-desktop.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -534,9 +452,20 @@
         max-width: 1200px !important;
     }
 
-    .service {
-        width: 360px;
-        margin: 25px 0;
+    .services {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        margin: 50px auto;
     }
 
     .service:last-child {
@@ -577,7 +506,7 @@
     #reasons:before {
         content: '';
         position: absolute;
-        background: url("/images//about-strip.png");
+        background: url("/images/about-strip.png");
         height: 140%;
         right: 0px;
         width: 80%;
@@ -588,7 +517,7 @@
     #reasons:after {
         content: '';
         position: absolute;
-        background: url("/images/image-4.jpg");
+        background: url("/images/image-13.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: right;

@@ -151,6 +151,7 @@
     width: 100%;
     -webkit-box-shadow: 0 0 40px rgba(0,0,0,.1);
     box-shadow: 0 0 40px rgba(0,0,0,.1);
+    border-radius: 5px;
 }
 
 .about-content p {
@@ -212,11 +213,22 @@
 <--- -------------------------- -*/
 
 #about-strip {
-    background: url("/images/about-strip.png");
+    background: url("/images/about-mobile.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+}
+
+#about-strip:before {
+    content: '';
+    background: #000;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: .6;
 }
 
 .strip-content h2 {
@@ -224,23 +236,41 @@
     text-align: center;
     font-size: 1.875em;
     margin-bottom: 50px;
+    position: relative;
+    z-index: 100;
 }
 
 .strip-content button {
     display: block;
     margin: auto;
-    margin-bottom: 180px;
+    position: relative;
+    z-index: 100;
 }
 
-#about-strip svg {
-    width: 100%;
+#about-strip img {
+    width: 450px;
     position: absolute;
-    bottom: -1px;
+    display: none;
 }
 
 /*-- -------------------------- -->
 <---           STATS            -->
 <--- -------------------------- -*/
+
+.stats-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
 
 .stat {
     display: -webkit-box;
@@ -284,6 +314,7 @@
 <--- -------------------------- -*/
 
 #more-reviews {
+    padding-top: 0;
     padding-bottom: 0;
 }
 
@@ -298,6 +329,11 @@
 .review-text h2 {
     font-size: 1.875em;
     margin-bottom: 25px;
+}
+
+.quote {
+    width: 20px;
+    height: auto;
 }
 
 .last-p {
@@ -320,8 +356,15 @@
     <---           LANDING          -->
     /*--- -------------------------- -*/
 
+    #hero {
+        height: 200px;
+    }
+
     .about-box {
         width: 500px;
+        -webkit-transform: translateY(100px);
+            -ms-transform: translateY(100px);
+                transform: translateY(100px);
     }
 
     .about-box h1 {
@@ -333,10 +376,18 @@
     /*--- -------------------------- -*/
 
     .card-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-top: 150px;
     }
 
@@ -356,26 +407,34 @@
     /*--- -------------------------- -*/
 
     .about-strip-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .strip-content button {
-        margin-bottom: 240px;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
     }
 
     #about-strip svg {
         width: 400px;
     }
 
+
+
 }
 
 /* Ipad Pro */
-@media screen and (min-width: 900px) and (max-width: 1025px) {
+@media screen and (min-width: 900px) and (max-width: 1200px) {
 
     .mobile-nav {
         max-width: 100%;
+    }
+
+    .container {
+        max-width: 900px;
     }
 
     /*-- -------------------------- -->
@@ -412,10 +471,18 @@
     /*--- -------------------------- -*/
 
     .card-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
         margin-top: 150px;
     }
 
@@ -445,8 +512,12 @@
     /*--- -------------------------- -*/
 
     .about-content-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-between;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
     }
 
     .about-content {
@@ -497,6 +568,7 @@
     .strip-content button {
         margin: auto;
         margin-left: 0;
+        margin-bottom: 0;
     }
 
     #about-strip svg {
@@ -585,7 +657,7 @@
 
 
 /* Desktop */
-@media screen and  (min-width: 1026px) {
+@media screen and  (min-width: 1201px) {
 
     /*-- -------------------------- -->
     <---           HERO             -->
@@ -593,7 +665,7 @@
 
     #hero {
         height: 500px;
-        background: url("/images/image-23.jpg");
+        background: url("/images/about-desktop.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -717,6 +789,9 @@
     /*--- -------------------------- -*/
 
     #about-strip {
+        background: url("/images/about-desktop.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
         padding: 50px 0 !important;
         margin-top: 100px;
         margin-bottom: 50px;
@@ -748,11 +823,15 @@
         margin-left: 0;
     }
 
-    #about-strip svg {
-        width: 800px;
+    #about-strip img {
+        display: block;
+        width: 450px;
         height: auto !important;
-        right: 100px;
-        bottom: 0;
+        right: 270px;
+        bottom: -70px;
+        border-radius: 5px;
+        -webkit-box-shadow: 0 0 40px rgba(0,0,0,.1);
+        box-shadow: 0 0 40px rgba(0,0,0,.1);
     }
 
     /*-- -------------------------- -->

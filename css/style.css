@@ -596,14 +596,14 @@ iframe {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin: 100px auto 50px auto;
+    margin: 100px auto 0px auto;
 }
 
 .link-item {
     -webkit-box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
-    height: 300px;
-    width: 300px;
+    height: 250px;
+    width: 250px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -618,18 +618,265 @@ iframe {
     border-left: 5px solid var(--primary);
 }
 
+.link-item:last-child {
+    margin-bottom: 0;
+}
+
 .links a {
     width: auto;
 }
 
-.links a img {
-    width: 200px;
+.links img {
+    width: 150px;
     height: auto;
+}
+
+.links img:last-child {
+    width: 100px;
+}
+
+/*-- -------------------------- -->
+<---           CONTENT          -->
+<--- -------------------------- -*/
+
+.desktop {
+    display: none;
+}
+
+.content-left {
+    position: relative;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.content-left img {
+    width: 220px;
+    position: absolute;
+    -webkit-box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    border: 5px solid #fff;
+}
+
+.content-left img:first-child {
+    top: 0;
+    left: 0;
+}
+
+.content-left img:nth-child(2) {
+    top: 0;
+    left: 270px;
+    width: 70px;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
+}
+
+.content-left img:last-child {
+    top: 50px;
+    left: 130px
+}
+
+.content-right h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 5px solid var(--primary);
+    position: relative;
+}
+
+.content-right h2:before {
+    content: url("/images/leaf-graphic-1.png");
+    position: absolute;
+    left: -6px;
+    top: -42px;
+}
+
+.service-item {
+    margin: 40px auto;
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 25px;
+}
+
+.service-item h3:before {
+    content: url("/images/leaf-bullet.png");
+    height: 15px;
+    width: auto;
+    position: absolute;
+    left: 0;
+}
+
+/*-- -------------------------- -->
+<---         TREE SAFETY        -->
+<--- -------------------------- -*/
+
+#tree-safety h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 5px solid var(--primary);
+    position: relative;
+}
+
+#tree-safety h2:before {
+    content: url("/images/leaf-graphic-1.png");
+    position: absolute;
+    left: -6px;
+    top: -42px;
+}
+
+#tree-safety p {
+    margin-bottom: 15px;
+}
+
+/*-- -------------------------- -->
+<---         CALL STRIP         -->
+<--- -------------------------- -*/
+
+#call-strip {
+    background: url("/images/call-strip-mobile.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: cover;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 430px;
+    margin-bottom: 350px;
+}
+
+#call-strip:before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    opacity: .7;
+    background: rgb(27,38,19);
+    background: -o-linear-gradient(141deg, rgba(27,38,19,1) 0%, rgba(34,102,7,1) 100%);
+    background: linear-gradient(309deg, rgba(27,38,19,1) 0%, rgba(34,102,7,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1b2613",endColorstr="#226607",GradientType=1);
+}
+
+.contact-container {
+    -webkit-transform: translateY(-90px);
+        -ms-transform: translateY(-90px);
+            transform: translateY(-90px)
+}
+
+#call-strip h2 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    margin-bottom: 15px;
+    line-height: 1.5em;
+    font-size: 1.6em;
+}
+
+#call-strip h3 {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    font-size: 2em;
+}
+
+#call-strip a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+#call-strip p {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.card-section {
+    background: #fff;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 9;
+    padding: 30px;
+    margin: 0 20px;
+    width: 95%;
+    bottom: -300px;
+    -webkit-box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 21px -9px rgba(0,0,0,0.75);
+}
+
+.card-section-item {
+    margin-bottom: 20px;
+}
+
+#call-strip .card-section h3 {
+    color: var(--primary);
+    position: relative;
+    z-index: 10;
+    font-size: 45px;
+}
+
+#call-strip .card-section p {
+    color: #555;
+    position: relative;
+    z-index: 10;
+    font-size: 20px;
+}
+
+/*-- -------------------------- -->
+<---         TREE SAFETY        -->
+<--- -------------------------- -*/
+
+#save-tree h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    border-left: 5px solid var(--primary);
+    position: relative;
+}
+
+#save-tree h2:before {
+    content: url("/images/leaf-graphic-1.png");
+    position: absolute;
+    left: -6px;
+    top: -28px;
+}
+
+#save-tree p {
+    margin-bottom: 15px;
 }
 
 /*-- -------------------------- -->
 <---           GALLERY          -->
 <--- -------------------------- -*/
+
 .gallery-topper {
     width: 100%;
     background: var(--secondary);
@@ -751,10 +998,11 @@ iframe {
     height: 30px;
     width: auto;
     margin: 0;
+    text-align: center;
 }
 
 .info p {
-    text-align: left;
+    text-align: center;
     height: 30px;
     width: auto;
     margin: 0;
@@ -1021,6 +1269,10 @@ iframe {
         height: 250px;
     }
 
+    .link-item:nth-child(3) {
+        margin-bottom: 0;
+    }
+
     .links a img {
         width: 150px;
         height: auto;
@@ -1028,6 +1280,68 @@ iframe {
 
     .links img {
         height: 180px;
+    }
+
+    /*-- -------------------------- -->
+    <---         CALL STRIP         -->
+    <--- -------------------------- -*/
+
+    #call-strip h2 {
+        width: 600px;
+        font-size: 2em;
+    }
+
+    #call-strip h3 {
+        font-size: 3em;
+    }
+
+    /*-- -------------------------- -->
+    <---           CONTENT          -->
+    <--- -------------------------- -*/
+
+    .content-container {
+        margin-bottom: 50px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        height: auto;
+    }
+
+    .content-left {
+        width: 400px;
+        height: 400px;
+        margin-bottom: 50px;
+    }
+
+    .content-left img {
+        width: 300px;
+        border: 10px solid #fff;
+    }
+
+    .content-left img:nth-child(2) {
+        left: 350px;
+    }
+
+    .content-services {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .service-item {
+        width: 45%;
     }
 
     /*-- -------------------------- -->
@@ -1120,7 +1434,7 @@ iframe {
         position: relative;
         z-index: 3;
         height: auto;
-        margin: auto
+        margin: auto;
         width: 1100px !important;
     }
 
@@ -1710,6 +2024,46 @@ iframe {
         bottom: -3px;
     }
 
+    /*-- -------------------------- -->
+    <---          CONTENT           -->
+    <--- -------------------------- -*/
+
+    .content-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .content-left img {
+        width: 400px;
+    }
+
+    .content-left img:nth-child(2) {
+        left: 450px;
+    }
+
+    .content-right {
+        width: 450px;
+    }
+
+    .content-services {
+        margin: 50px auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+    }
+
+    .service-item {
+        width: 45%;
+    }
     
     /*-- -------------------------- -->
     <---          QUALITIES         -->
@@ -1737,7 +2091,7 @@ iframe {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
-        margin: 0 !important;
+        margin: auto !important;
         padding: 0;
         max-width: 1200px;
     }
@@ -1768,6 +2122,64 @@ iframe {
         -webkit-box-pack: justify;
             -ms-flex-pack: justify;
                 justify-content: space-between;
+    }
+
+    .link-item:last-child {
+        margin-bottom: 50px;
+    }
+
+    #call-strip {
+        margin-bottom: 200px;
+        height: 470px;
+    }
+
+    #call-strip h2 {
+        font-size: 45px;
+        width: 700px;
+    }
+
+    .card-section {
+        max-width: 1200px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        padding: 90px;
+        border-radius: 20px;
+        bottom: -150px;
+    }
+
+    .contact-container {
+        -webkit-transform: translateY(-70px);
+            -ms-transform: translateY(-70px);
+                transform: translateY(-70px);
+    }
+
+    .card-section-item {
+        margin-bottom: 0;
+    }
+
+    #call-strip .card-section h3 {
+        font-size: 65px;
+    }
+
+    #call-strip .card-section p {
+        font-size: 20px !important;
+    }
+
+    #tree-safety {
+        padding-top: 0 !important;
+    }
+
+    #tree-safety h2, #save-tree h2 {
+        font-size: 3em;
+        margin-bottom: 30px;
     }
 
     /*-- -------------------------- -->
